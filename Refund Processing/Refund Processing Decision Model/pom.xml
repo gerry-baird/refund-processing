@@ -37,6 +37,11 @@
 
 <dependencies>
         <dependency>
+            <groupId>gerry.baird_uk.ibm.com.refund_processing.refund_processing</groupId>
+            <artifactId>refundProcessingDataModel</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>
         </dependency>

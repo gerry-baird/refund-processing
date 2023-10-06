@@ -7,24 +7,75 @@
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
     </extensionElements>
-    <inputData id="node_0" name="Input">
+    <inputData id="node_0" name="refund request">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.String" collection="false" name="Input"/>
+                <output bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest" collection="false" name="refund request"/>
             </initialization>
         </extensionElements>
-        <variable id="node_0_ii" name="Input" typeRef="java.lang.String"/>
+        <variable id="node_0_ii" name="refund request" typeRef="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest"/>
     </inputData>
-    <decision id="node_1" name="Decision">
+    <decision id="node_1" name="Final Refund Decision">
         <extensionElements>
-            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.String" collection="false" name="Input"/>
-                <output bomType="java.lang.String" collection="false" name="Decision"/>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Validate Type of Goods"/>
+                <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Validate Time Window"/>
+                <output bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Final Refund Decision"/>
+                <rule defaultRule="false" href="node_1/Denied%20Decision.drl" kind="BusinessRule" name="Denied Decision"/>
+                <rule defaultRule="false" href="node_1/Manual%20Decision.drl" kind="BusinessRule" name="Manual Decision"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Decision" typeRef="java.lang.String"/>
+        <variable id="node_1_ii" name="Final Refund Decision" typeRef="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="order">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order" collection="false" name="order"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="order" typeRef="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order"/>
+    </inputData>
+    <decision id="node_3" name="Validate Type of Goods">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest" collection="false" name="refund request"/>
+                <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order" collection="false" name="order"/>
+                <output bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Validate Type of Goods"/>
+                <rule defaultRule="false" href="node_3/Validate%20Time%20Window.dmt" kind="DecisionTable" name="Validate Time Window"/>
+                <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Validate Type of Goods" typeRef="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Validate Time Window">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest" collection="false" name="refund request"/>
+                <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order" collection="false" name="order"/>
+                <output bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Validate Time Window"/>
+                <rule defaultRule="false" href="node_4/Validate%20Type%20of%20Goods.dmt" kind="DecisionTable" name="Validate Type of Goods"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Validate Time Window" typeRef="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
         </informationRequirement>
     </decision>
 </definitions>

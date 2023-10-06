@@ -1,0 +1,1 @@
+{"operationId":"aaa7e19a-66dd-4463-aa00-ae58352e056a","body":{"order":{"goodsCategories":"hazardousMaterial","salesTax":14.5,"shippingCost":0,"subtotal":200},"refundRequest":{"daysSinceOrderDelivered":5,"goodsCondition":"inOriginalPackage","reason":"lateDelivery"}}}

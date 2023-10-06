@@ -1,0 +1,1 @@
+{"operationId":"aaa7e19a-66dd-4463-aa00-ae58352e056a","body":{"order":{"goodsCategories":"perishable","salesTax":0,"shippingCost":8,"subtotal":45},"refundRequest":{"daysSinceOrderDelivered":1,"goodsCondition":"inOriginalPackage","reason":"noLongerNeeded"}}}

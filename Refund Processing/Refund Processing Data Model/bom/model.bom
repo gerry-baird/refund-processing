@@ -46,9 +46,9 @@ class Order
         property com.fasterxml.jackson.annotation.JsonTypeName "Order"
         #de.generated
 {
-    java.util.List goodsCategorieses domain 0,* class gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory
+    gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory goodsCategories
                 property ads.attributeId "4"
-                property com.fasterxml.jackson.annotation.JsonProperty "goodsCategorieses"
+                property com.fasterxml.jackson.annotation.JsonProperty "goodsCategories"
                 #update;
     double salesTax
                 property ads.attributeId "2"
@@ -62,28 +62,13 @@ class Order
                 property ads.attributeId "1"
                 property com.fasterxml.jackson.annotation.JsonProperty "subtotal"
                 #update;
-    Order(java.util.List goodsCategorieses domain 0,* class gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory, 
-        double salesTax, 
-        double shippingCost, 
-        double subtotal)
+    Order(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory goodsCategories, double salesTax, double shippingCost, double subtotal)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
                 #prototype;
     Order()
                 #dataio.default;
-    void addTo_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory goodsCategorieses)
-                property collectionAttribute "goodsCategorieses"
-                #update;
-    void clear_goodsCategorieses()
-                property collectionAttribute "goodsCategorieses"
-                #update;
-    void removeFrom_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory goodsCategorieses)
-                property collectionAttribute "goodsCategorieses"
-                #update;
-    void set_goodsCategorieses(java.util.Collection goodsCategorieses domain 0,* class gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory)
-                property collectionAttribute "goodsCategorieses"
-                #update;
 }
 
 class RefundDecision

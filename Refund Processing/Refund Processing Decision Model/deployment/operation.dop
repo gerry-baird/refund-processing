@@ -4,4 +4,13 @@
   <uuid>aaa7e19a-66dd-4463-aa00-ae58352e056a</uuid>
   <decisionModel href="../rules/decisionModel.dmo#91e5c66a-0a22-437c-9ceb-7626ad91c543"/>
   <targetRuleProject href="../../Refund%20Processing%20Decision%20Model#bc765cf5-393c-4b98-b914-9fa44793d78e"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Refund-Processing"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>

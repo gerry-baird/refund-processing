@@ -14,12 +14,10 @@ gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatam
 
 # gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order
 gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order#concept.label = Order
-gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.Order(java.util.List,double,double,double)#phrase.navigation = a new {Order} where {0, goods categories} {1, sales tax} {2, shipping cost} {3, subtotal}
-gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.addTo_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory)#phrase.action = add {0} to the goods categorieses of {this}
-gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.clear_goodsCategorieses()#phrase.action = clear the goods categorieses of {this}
-gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.goodsCategorieses#phrase.action = set the goods categorieses of {this} to {goods categories}
-gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.goodsCategorieses#phrase.navigation = {goods categories} of {this}
-gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.removeFrom_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory)#phrase.action = remove {0} from the goods categorieses of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.Order(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory,double,double,double)#phrase.navigation = a new {Order} where {0, goods categories} {1, sales tax} {2, shipping cost} {3, subtotal}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.goodsCategories#phrase.action = set the goods categories of {this} to {goods categories}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.goodsCategories#phrase.clearer = clear the goods categories of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.goodsCategories#phrase.navigation = {goods categories} of {this}
 gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.salesTax#phrase.action = set the sales tax of {this} to {sales tax}
 gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.salesTax#phrase.addition_setter = add {sales tax} to the sales tax of {this}
 gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.salesTax#phrase.navigation = {sales tax} of {this}

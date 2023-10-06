@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>45e1b16c-a23d-4661-8fae-254dd2a863f6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to approved ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
