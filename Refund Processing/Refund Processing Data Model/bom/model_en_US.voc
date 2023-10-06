@@ -1,0 +1,67 @@
+
+# gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory#concept.label = Goods Category
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory.downloadable#instance.label = downloadable
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory.hazardousMaterial#instance.label = hazardous material
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory.musicOrVideo#instance.label = music or video
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory.perishable#instance.label = perishable
+
+# gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition#concept.label = Goods Condition
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition.inOriginalPackage#instance.label = in original package
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition.openBox#instance.label = open box
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition.wornOrDamaged#instance.label = worn or damaged
+
+# gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order#concept.label = Order
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.Order(java.util.List,double,double,double)#phrase.navigation = a new {Order} where {0, goods categories} {1, sales tax} {2, shipping cost} {3, subtotal}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.addTo_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory)#phrase.action = add {0} to the goods categorieses of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.clear_goodsCategorieses()#phrase.action = clear the goods categorieses of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.goodsCategorieses#phrase.action = set the goods categorieses of {this} to {goods categories}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.goodsCategorieses#phrase.navigation = {goods categories} of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.removeFrom_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory)#phrase.action = remove {0} from the goods categorieses of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.salesTax#phrase.action = set the sales tax of {this} to {sales tax}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.salesTax#phrase.addition_setter = add {sales tax} to the sales tax of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.salesTax#phrase.navigation = {sales tax} of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.salesTax#phrase.subtraction_setter = subtract {sales tax} from the sales tax of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.shippingCost#phrase.action = set the shipping cost of {this} to {shipping cost}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.shippingCost#phrase.addition_setter = add {shipping cost} to the shipping cost of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.shippingCost#phrase.navigation = {shipping cost} of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.shippingCost#phrase.subtraction_setter = subtract {shipping cost} from the shipping cost of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.subtotal#phrase.action = set the subtotal of {this} to {subtotal}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.subtotal#phrase.addition_setter = add {subtotal} to the subtotal of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.subtotal#phrase.navigation = {subtotal} of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.Order.subtotal#phrase.subtraction_setter = subtract {subtotal} from the subtotal of {this}
+
+# gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision#concept.label = Refund Decision
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision.approved#instance.label = approved
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision.denied#instance.label = denied
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision.manual#instance.label = manual
+
+# gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest#concept.label = Refund Request
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.RefundRequest(double,gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition,gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason)#phrase.navigation = a new {Refund Request} where {0, days since order delivered} {1, goods condition} {2, reason}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.daysSinceOrderDelivered#phrase.action = set the days since order delivered of {this} to {days since order delivered}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.daysSinceOrderDelivered#phrase.addition_setter = add {days since order delivered} to the days since order delivered of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.daysSinceOrderDelivered#phrase.navigation = {days since order delivered} of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.daysSinceOrderDelivered#phrase.subtraction_setter = subtract {days since order delivered} from the days since order delivered of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.goodsCondition#phrase.action = set the goods condition of {this} to {goods condition}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.goodsCondition#phrase.clearer = clear the goods condition of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.goodsCondition#phrase.navigation = {goods condition} of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.reason#phrase.action = set the reason of {this} to {reason}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.reason#phrase.clearer = clear the reason of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequest.reason#phrase.navigation = {reason} of {this}
+
+# gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason#concept.label = Refund Request Reason
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.accidentalOrder#instance.label = accidental order
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.damagedShipment#instance.label = damaged shipment
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.defective#instance.label = defective
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.didNotMeetExpectations#instance.label = did not meet expectations
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.doesNotMatchWebsiteDescription#instance.label = does not match website description
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.excessiveAmount#instance.label = excessive amount
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.lateDelivery#instance.label = late delivery
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.noLongerNeeded#instance.label = no longer needed
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.wrongProductOrdered#instance.label = wrong product ordered
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.wrongProductShipped#instance.label = wrong product shipped

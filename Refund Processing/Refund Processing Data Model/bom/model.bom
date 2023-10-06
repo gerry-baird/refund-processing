@@ -1,0 +1,183 @@
+
+package gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel;
+
+
+class GoodsCategory
+        extends java.lang.Enum
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "GoodsCategory"
+        #de.generated
+{
+    domain {static downloadable, static hazardousMaterial, static musicOrVideo, static perishable}
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory downloadable
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "downloadable";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory hazardousMaterial
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "hazardousMaterial";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory musicOrVideo
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "musicOrVideo";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory perishable
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "perishable";
+}
+
+class GoodsCondition
+        extends java.lang.Enum
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "GoodsCondition"
+        #de.generated
+{
+    domain {static inOriginalPackage, static openBox, static wornOrDamaged}
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition inOriginalPackage
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "inOriginalPackage";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition openBox
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "openBox";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition wornOrDamaged
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "wornOrDamaged";
+}
+
+class Order
+        property ads.typeId "6"
+        property com.fasterxml.jackson.annotation.JsonTypeName "Order"
+        #de.generated
+{
+    java.util.List goodsCategorieses domain 0,* class gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "goodsCategorieses"
+                #update;
+    double salesTax
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "salesTax"
+                #update;
+    double shippingCost
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "shippingCost"
+                #update;
+    double subtotal
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "subtotal"
+                #update;
+    Order(java.util.List goodsCategorieses domain 0,* class gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory, 
+        double salesTax, 
+        double shippingCost, 
+        double subtotal)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    Order()
+                #dataio.default;
+    void addTo_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory goodsCategorieses)
+                property collectionAttribute "goodsCategorieses"
+                #update;
+    void clear_goodsCategorieses()
+                property collectionAttribute "goodsCategorieses"
+                #update;
+    void removeFrom_goodsCategorieses(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory goodsCategorieses)
+                property collectionAttribute "goodsCategorieses"
+                #update;
+    void set_goodsCategorieses(java.util.Collection goodsCategorieses domain 0,* class gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCategory)
+                property collectionAttribute "goodsCategorieses"
+                #update;
+}
+
+class RefundDecision
+        extends java.lang.Enum
+        property ads.typeId "3"
+        property com.fasterxml.jackson.annotation.JsonTypeName "RefundDecision"
+        #de.generated
+{
+    domain {static approved, static denied, static manual}
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision approved
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "approved";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision denied
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "denied";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision manual
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "manual";
+}
+
+class RefundRequest
+        property ads.typeId "5"
+        property com.fasterxml.jackson.annotation.JsonTypeName "RefundRequest"
+        #de.generated
+{
+    double daysSinceOrderDelivered
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "daysSinceOrderDelivered"
+                #update;
+    gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition goodsCondition
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "goodsCondition"
+                #update;
+    gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason reason
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "reason"
+                #update;
+    RefundRequest(double daysSinceOrderDelivered, gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.GoodsCondition goodsCondition, gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason reason)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    RefundRequest()
+                #dataio.default;
+}
+
+class RefundRequestReason
+        extends java.lang.Enum
+        property ads.typeId "4"
+        property com.fasterxml.jackson.annotation.JsonTypeName "RefundRequestReason"
+        #de.generated
+{
+    domain 
+    {
+        static accidentalOrder,
+        static damagedShipment,
+        static defective,
+        static didNotMeetExpectations,
+        static doesNotMatchWebsiteDescription,
+        static excessiveAmount,
+        static lateDelivery,
+        static noLongerNeeded,
+        static wrongProductOrdered,
+        static wrongProductShipped
+    }
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason accidentalOrder
+                property ads.attributeId "8"
+                property com.fasterxml.jackson.annotation.JsonProperty "accidentalOrder";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason damagedShipment
+                property ads.attributeId "9"
+                property com.fasterxml.jackson.annotation.JsonProperty "damagedShipment";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason defective
+                property ads.attributeId "10"
+                property com.fasterxml.jackson.annotation.JsonProperty "defective";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason didNotMeetExpectations
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "didNotMeetExpectations";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason doesNotMatchWebsiteDescription
+                property ads.attributeId "7"
+                property com.fasterxml.jackson.annotation.JsonProperty "doesNotMatchWebsiteDescription";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason excessiveAmount
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "excessiveAmount";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason lateDelivery
+                property ads.attributeId "4"
+                property com.fasterxml.jackson.annotation.JsonProperty "lateDelivery";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason noLongerNeeded
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "noLongerNeeded";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason wrongProductOrdered
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "wrongProductOrdered";
+    static final readonly gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason wrongProductShipped
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "wrongProductShipped";
+}
+
