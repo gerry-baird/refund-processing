@@ -63,3 +63,10 @@ gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatam
 gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.noLongerNeeded#instance.label = no longer needed
 gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.wrongProductOrdered#instance.label = wrong product ordered
 gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundRequestReason.wrongProductShipped#instance.label = wrong product shipped
+
+# gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse#concept.label = Refund Response
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse.RefundResponse(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision)#phrase.navigation = a new {Refund Response} where {0, decision}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse.decision#phrase.action = set the decision of {this} to {decision}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse.decision#phrase.clearer = clear the decision of {this}
+gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse.decision#phrase.navigation = {decision} of {this}

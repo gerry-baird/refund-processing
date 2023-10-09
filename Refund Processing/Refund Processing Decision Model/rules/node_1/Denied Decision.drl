@@ -7,5 +7,6 @@
 	'Validate Type of Goods' is denied 
 	or 'Validate Time Window' is denied 
 then
-	set decision to denied ;]]></definition>
+	set decision to a new Refund Response where 
+	the decision is denied ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

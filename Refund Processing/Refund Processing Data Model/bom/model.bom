@@ -166,3 +166,21 @@ class RefundRequestReason
                 property com.fasterxml.jackson.annotation.JsonProperty "wrongProductShipped";
 }
 
+class RefundResponse
+        property ads.typeId "7"
+        property com.fasterxml.jackson.annotation.JsonTypeName "RefundResponse"
+        #de.generated
+{
+    gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision decision
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "decision"
+                #update;
+    RefundResponse(gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision decision)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    RefundResponse()
+                #dataio.default;
+}
+

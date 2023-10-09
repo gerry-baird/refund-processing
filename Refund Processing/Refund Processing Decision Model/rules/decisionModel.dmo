@@ -20,13 +20,13 @@
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
                 <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Validate Type of Goods"/>
                 <input bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Validate Time Window"/>
-                <output bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision" collection="false" name="Final Refund Decision"/>
+                <output bomType="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse" collection="false" name="Final Refund Decision"/>
                 <rule defaultRule="false" href="node_1/Denied%20Decision.drl" kind="BusinessRule" name="Denied Decision"/>
                 <rule defaultRule="false" href="node_1/Manual%20Decision.drl" kind="BusinessRule" name="Manual Decision"/>
                 <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Final Refund Decision" typeRef="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundDecision"/>
+        <variable id="node_1_ii" name="Final Refund Decision" typeRef="gerry.baird_uk.ibm.com.refund_processing.refund_processing.refundprocessingdatamodel.RefundResponse"/>
         <informationRequirement>
             <requiredInput href="#node_3"/>
         </informationRequirement>

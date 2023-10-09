@@ -7,5 +7,6 @@
 	'Validate Type of Goods' is manual 
 	or 'Validate Time Window' is manual 
 then
-	set decision to manual ;]]></definition>
+	set decision to a new Refund Response where 
+	the decision is manual ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

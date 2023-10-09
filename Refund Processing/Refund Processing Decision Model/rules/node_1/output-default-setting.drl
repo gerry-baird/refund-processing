@@ -3,5 +3,6 @@
   <name>output-default-setting</name>
   <uuid>b62b34d8-347a-46b0-828a-1f37aeecb30f</uuid>
   <locale>en_US</locale>
-  <definition><![CDATA[set decision to approved ;]]></definition>
+  <definition><![CDATA[set decision to a new Refund Response where 
+	the decision is approved ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
